@@ -16,6 +16,7 @@ public class Abstract_Class {
 
     //set the global variables as public static order
     //to be used on your @test classes
+    //new changes
 
     public static WebDriver driver;
     public static ExtentReports reports;
