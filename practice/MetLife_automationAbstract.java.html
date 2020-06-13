@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>MetLife_automationAbstract.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MetLife_automationAbstract.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">practice</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">CustomReuseable.Abstract_Class</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">CustomReuseable.CustoRereusable_libraryLogger</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">com.relevantcodes.extentreports.LogStatus</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.By</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.WebDriver</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.WebElement</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.chrome.ChromeDriver</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.chrome.ChromeOptions</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.interactions.Actions</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.testng.annotations.Test</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.ArrayList</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">MetLife_automationAbstract </span><span class="s0">extends </span><span class="s1">Abstract_Class</span><span class="s2">//Class start from here</span>
+<span class="s1">{   </span><span class="s2">//main  method where loops and variables are stored.</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">MetLife() </span><span class="s0">throws </span><span class="s1">InterruptedException {</span>
+
+        <span class="s1">ArrayList&lt;String&gt; Zipcode = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;()</span><span class="s0">;</span><span class="s2">//declare arraylist for zipCode</span>
+        <span class="s1">Zipcode.add(</span><span class="s3">&quot;11230&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Zipcode.add(</span><span class="s3">&quot;11226&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Zipcode.add(</span><span class="s3">&quot;11241&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">ArrayList&lt;String&gt; dentalProgram = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;()</span><span class="s0">;</span><span class="s2">//declare arraylist for dentalProgram</span>
+        <span class="s1">dentalProgram.add(</span><span class="s3">&quot;PPO-LOW&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">dentalProgram.add(</span><span class="s3">&quot;PPO-MEDIUM&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">dentalProgram.add(</span><span class="s3">&quot;PPO-HIGH&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">ArrayList&lt;String&gt; referralCode = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;()</span><span class="s0">;</span><span class="s2">//declare arrayList for referralcode</span>
+        <span class="s1">referralCode.add(</span><span class="s3">&quot;3256&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">referralCode.add(</span><span class="s3">&quot;8974&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">referralCode.add(</span><span class="s3">&quot;9420&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+
+        <span class="s1">driver.navigate().to(</span><span class="s3">&quot;https://www.metlife.com/&quot;</span><span class="s1">)</span><span class="s0">;</span><span class="s2">//navigate to MetLife.com</span>
+        <span class="s1">Thread.sleep(</span><span class="s4">2000</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">CustoRereusable_libraryLogger.Title(driver</span><span class="s0">, </span><span class="s3">&quot;Insurance and Employee Benefits | MetLife&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+        <span class="s1">CustoRereusable_libraryLogger.MouseHover(driver</span><span class="s0">,</span><span class="s3">&quot;//*[contains(text(),'SOLUTIONS')]&quot;</span><span class="s0">,</span><span class="s3">&quot;Solution&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+        <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">CustoRereusable_libraryLogger.MouseClick(driver</span><span class="s0">,</span><span class="s3">&quot;//*[contains(text(),'MetLife TakeAlong Dental')]&quot;</span><span class="s0">,</span><span class="s3">&quot;TakeAlong Dental&quot;</span><span class="s0">, </span><span class="s1">logger )</span><span class="s0">;</span>
+        <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">CustoRereusable_libraryLogger.Title(driver</span><span class="s0">, </span><span class="s3">&quot;MetLife TakeAlong Dental | MetLife&quot;</span><span class="s0">,</span><span class="s1">logger)</span><span class="s0">;</span>
+        <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i =</span><span class="s4">0</span><span class="s0">; </span><span class="s1">i&lt;Zipcode.size()</span><span class="s0">; </span><span class="s1">i++) {</span><span class="s2">//starting for loop</span>
+
+            <span class="s1">CustoRereusable_libraryLogger.MouseClick(driver</span><span class="s0">,</span><span class="s3">&quot;//*[contains(text(),'Enroll Now')]&quot;</span><span class="s0">, </span><span class="s3">&quot;Enroll now Button&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+
+            <span class="s1">ArrayList&lt;String&gt; tabs = </span><span class="s0">new </span><span class="s1">ArrayList&lt;&gt;(driver.getWindowHandles())</span><span class="s0">;</span><span class="s2">//declaring array list for handling tabs</span>
+            <span class="s1">driver.switchTo().window(tabs.get(</span><span class="s4">1</span><span class="s1">))</span><span class="s0">;</span><span class="s2">//switching the tabs to second tab</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">CustoRereusable_libraryLogger.userKeys(driver</span><span class="s0">,</span><span class="s3">&quot;//*[@id='txtZipCode']&quot;</span><span class="s0">, </span><span class="s1">Zipcode.get(i)</span><span class="s0">, </span><span class="s3">&quot;Entering Zip&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">CustoRereusable_libraryLogger.MouseClick(driver</span><span class="s0">,</span><span class="s3">&quot;//*[@id = 'txtZipCodetxt']&quot;</span><span class="s0">,</span><span class="s3">&quot;Go Button&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">CustoRereusable_libraryLogger.MouseClick(driver</span><span class="s0">,</span><span class="s3">&quot;//*[@class = '&quot; </span><span class="s1">+ dentalProgram.get(i) + </span><span class="s3">&quot;']&quot;</span><span class="s0">, </span><span class="s3">&quot;First dental&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">CustoRereusable_libraryLogger.MouseClick(driver</span><span class="s0">,</span><span class="s3">&quot;//*[@id ='topenrolltab']&quot;</span><span class="s0">, </span><span class="s3">&quot;Program option&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">CustoRereusable_libraryLogger.userKeys(driver</span><span class="s0">,</span><span class="s3">&quot;//*[@id = 'txtBxPromocode']&quot;</span><span class="s0">,</span><span class="s1">referralCode.get(i)</span><span class="s0">, </span><span class="s3">&quot;Promotion code&quot;</span><span class="s0">, </span><span class="s1">logger )</span><span class="s0">;</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">CustoRereusable_libraryLogger.MouseClick(driver</span><span class="s0">,</span><span class="s3">&quot;//*[@name='btnEnroll']&quot;</span><span class="s0">, </span><span class="s3">&quot;Enroll without code&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">CustoRereusable_libraryLogger.captureText(driver</span><span class="s0">,</span><span class="s3">&quot;//*[@id ='lblRefCodeError']&quot;</span><span class="s0">, </span><span class="s3">&quot;error message&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">CustoRereusable_libraryLogger.MouseClick(driver</span><span class="s0">,</span><span class="s3">&quot;//*[@id='withoutrefcode']&quot;</span><span class="s0">, </span><span class="s3">&quot;Without referall code&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+
+            <span class="s1">String capture = CustoRereusable_libraryLogger.captureText(driver</span><span class="s0">,</span><span class="s3">&quot;//*[@class='col-sm-8']&quot;</span><span class="s0">, </span><span class="s3">&quot;Result&quot;</span><span class="s0">, </span><span class="s1">logger)</span><span class="s0">;</span><span class="s2">//matching the capture text with array text</span>
+            <span class="s0">if </span><span class="s1">(capture.contains(dentalProgram.get(i))){</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;The result matches&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">logger.log(LogStatus.PASS</span><span class="s0">,</span><span class="s3">&quot;The result matches&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span><span class="s0">else</span><span class="s1">{</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;The result did not match &quot; </span><span class="s1">+ capture)</span><span class="s0">;</span>
+                <span class="s1">logger.log(LogStatus.FAIL</span><span class="s0">,</span><span class="s3">&quot;The result did not match &quot; </span><span class="s1">+ capture)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s1">driver.close()</span><span class="s0">;</span><span class="s2">//closing the tab/current page</span>
+            <span class="s1">driver.switchTo().window(tabs.get(</span><span class="s4">0</span><span class="s1">))</span><span class="s0">;</span><span class="s2">//switching back to first page</span>
+            <span class="s1">Thread.sleep(</span><span class="s4">3000</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s2">//driver.quit();//Quit the page</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

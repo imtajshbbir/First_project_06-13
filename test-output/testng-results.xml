@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Entering a value on element Search Field]]>
+    </line>
+    <line>
+      <![CDATA[Entering a value on element Google Search Button]]>
+    </line>
+    <line>
+      <![CDATA[Entering a value on element Search Result]]>
+    </line>
+    <line>
+      <![CDATA[The search Result is 1,420,000,000]]>
+    </line>
+    <line>
+      <![CDATA[Entering a value on element Search Field]]>
+    </line>
+    <line>
+      <![CDATA[Entering a value on element Google Search Button]]>
+    </line>
+    <line>
+      <![CDATA[Entering a value on element Search Result]]>
+    </line>
+    <line>
+      <![CDATA[The search Result is 411,000,000]]>
+    </line>
+    <line>
+      <![CDATA[Entering a value on element Search Field]]>
+    </line>
+    <line>
+      <![CDATA[Entering a value on element Google Search Button]]>
+    </line>
+    <line>
+      <![CDATA[Entering a value on element Search Result]]>
+    </line>
+    <line>
+      <![CDATA[The search Result is 265,000,000]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2020-05-17T12:56:16 EDT" name="Default Suite" finished-at="2020-05-17T12:56:41 EDT" duration-ms="25142">
+    <groups>
+    </groups>
+    <test started-at="2020-05-17T12:56:16 EDT" name="Maven_Automation" finished-at="2020-05-17T12:56:41 EDT" duration-ms="25142">
+      <class name="Automation_day11.Google_search_TestNG">
+        <test-method is-config="true" signature="callDriver()[pri:0, instance:Automation_day11.Google_search_TestNG@52e6fdee]" started-at="2020-05-17T12:56:16 EDT" name="callDriver" finished-at="2020-05-17T12:56:23 EDT" duration-ms="6411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- callDriver -->
+        <test-method signature="googleSearch()[pri:0, instance:Automation_day11.Google_search_TestNG@52e6fdee]" started-at="2020-05-17T12:56:23 EDT" name="googleSearch" finished-at="2020-05-17T12:56:40 EDT" duration-ms="17905" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Entering a value on element Search Field]]>
+            </line>
+            <line>
+              <![CDATA[Entering a value on element Google Search Button]]>
+            </line>
+            <line>
+              <![CDATA[Entering a value on element Search Result]]>
+            </line>
+            <line>
+              <![CDATA[The search Result is 1,420,000,000]]>
+            </line>
+            <line>
+              <![CDATA[Entering a value on element Search Field]]>
+            </line>
+            <line>
+              <![CDATA[Entering a value on element Google Search Button]]>
+            </line>
+            <line>
+              <![CDATA[Entering a value on element Search Result]]>
+            </line>
+            <line>
+              <![CDATA[The search Result is 411,000,000]]>
+            </line>
+            <line>
+              <![CDATA[Entering a value on element Search Field]]>
+            </line>
+            <line>
+              <![CDATA[Entering a value on element Google Search Button]]>
+            </line>
+            <line>
+              <![CDATA[Entering a value on element Search Result]]>
+            </line>
+            <line>
+              <![CDATA[The search Result is 265,000,000]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- googleSearch -->
+        <test-method is-config="true" signature="quiteDriver()[pri:0, instance:Automation_day11.Google_search_TestNG@52e6fdee]" started-at="2020-05-17T12:56:40 EDT" name="quiteDriver" finished-at="2020-05-17T12:56:41 EDT" duration-ms="752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quiteDriver -->
+      </class> <!-- Automation_day11.Google_search_TestNG -->
+    </test> <!-- Maven_Automation -->
+  </suite> <!-- Default Suite -->
+</testng-results>

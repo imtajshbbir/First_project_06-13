@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Yahoo_Search_Result_page.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Yahoo_Search_Result_page.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">Yahoo_Page_Object</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">CustomReuseable.Abstract_Class</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">CustomReuseable.CustoRereusable_libraryLogger</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">com.relevantcodes.extentreports.ExtentTest</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">com.relevantcodes.extentreports.LogStatus</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.JavascriptExecutor</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.WebDriver</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.support.PageFactory</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Yahoo_Search_Result_page </span><span class="s0">extends </span><span class="s1">Abstract_Class {</span>
+
+    <span class="s1">ExtentTest loggerYahoo</span><span class="s0">;</span>
+
+    <span class="s0">public </span><span class="s1">Yahoo_Search_Result_page(WebDriver driver){</span><span class="s2">// webdriver name has to match with the one in Abstract class</span>
+        <span class="s0">super</span><span class="s1">()</span><span class="s0">;</span>
+        <span class="s1">PageFactory.initElements(driver</span><span class="s0">, this</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s2">//local page gets set to abstract class logger when you use it in</span>
+        <span class="s2">//page object concept</span>
+        <span class="s0">this</span><span class="s1">.loggerYahoo = </span><span class="s0">super</span><span class="s1">.logger</span><span class="s0">;</span><span class="s2">//super is the Abstract class logger</span>
+    <span class="s1">}</span><span class="s2">//end of constructor</span>
+
+    <span class="s0">public </span><span class="s1">Yahoo_Search_Result_page ScrollToBottom(){</span>
+        <span class="s1">JavascriptExecutor jse = (JavascriptExecutor)driver</span><span class="s0">;</span>
+        <span class="s1">logger.log(LogStatus.INFO</span><span class="s0">,</span><span class="s3">&quot;Scrolling to the bottom of yahoo Search result page&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">jse.executeScript(</span><span class="s3">&quot;scroll(0,10000)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">return new </span><span class="s1">Yahoo_Search_Result_page(driver)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">Yahoo_Search_Result_page SearchNumber(){</span>
+
+        <span class="s1">String SearchResult = CustoRereusable_libraryLogger.captureText(driver</span><span class="s0">, </span><span class="s3">&quot;//*[@class='compPagination']&quot;</span><span class="s0">, </span><span class="s3">&quot;Search Result&quot;</span><span class="s0">, </span><span class="s1">loggerYahoo)</span><span class="s0">;</span>
+        <span class="s1">String[] SearchNumber = SearchResult.split(</span><span class="s3">&quot;Next&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">logger.log(LogStatus.INFO</span><span class="s0">,</span><span class="s3">&quot;The Search number is&quot; </span><span class="s1">+ SearchNumber[</span><span class="s4">1</span><span class="s1">])</span><span class="s0">;</span>
+        <span class="s0">return new </span><span class="s1">Yahoo_Search_Result_page(driver)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
